@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navBar {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+  color: rgb(111, 111, 241);
+}
+
+.navItems {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  color: rgb(62, 62, 173);
+}
+
+.navLinks li {
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  border: 1px solid rgb(71, 69, 69);
+  gap: 1rem;
+  align-items: center;
+}
+
+.buttonsList {
+  display: flex;
+  gap: 1rem;
+}
+
+.bookTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
+}
+
+.buttonsList li {
+  list-style: none;
+}
+
+.bookChart {
+  display: flex;
+  gap: 0.5rem;
+  width: 10rem;
+}
+
+.bookChapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
+}
+
+.addBook {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+
+.addBookForm {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
