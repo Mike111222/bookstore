@@ -6,15 +6,19 @@ const BookCard = () => {
   const books = useSelector((store) => store.books.books);
   const dispatch = useDispatch();
 
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
+  };
+
   const renderBooks = books.map((book) => (
-    <div key={book.item_id} className="bookContainer">
+    <div key={book.itemId} className="bookContainer">
       <div className="bookTitle">
         <p>{book.category}</p>
         <p>{book.title}</p>
         <p>{book.author}</p>
         <ul className="buttonsList">
           <li><button type="button">Comments</button></li>
-          <li><button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove</button></li>
+          <li><button type="button" onClick={() => handleRemoveBook(book.itemId)}>Remove</button></li>
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
