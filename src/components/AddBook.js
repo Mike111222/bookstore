@@ -11,7 +11,7 @@ const AddBook = () => {
     setValue((prevValues) => ({
       ...prevValues,
       [name]: value,
-      item_id: crypto.randomUUID(),
+      itemId: crypto.randomUUID(),
     }));
   };
 
