@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteBook, getBooks } from '../redux/books/booksSlice';
+import { deleteBook, fetchBooks } from '../redux/books/booksSlice';
 
 const BookCard = () => {
   const { books, isLoading, isError } = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getBooks());
+    dispatch(fetchBooks());
   }, [dispatch]);
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
