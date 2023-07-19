@@ -2,25 +2,16 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
-const template = {
-  item_id: '',
-  title: '',
-  author: '',
-  category: '',
-};
-
 const AddBook = () => {
-  const [values, setValue] = useState({ template });
+  const [values, setValue] = useState({});
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    const { name } = e.target;
-    const { value } = e.target;
-    setValue((values) => ({
-      ...values,
-      item_id: crypto.randomUUID(),
+    const { name, value } = e.target;
+    setValue((prevValues) => ({
+      ...prevValues,
       [name]: value,
-      category: 'Action',
+      itemId: crypto.randomUUID(),
     }));
   };
 
@@ -31,9 +22,9 @@ const AddBook = () => {
   };
 
   return (
-    <section className="addBook">
-      <h2>ADD NEW BOOK</h2>
-      <form className="addBookForm">
+    <section>
+      <h2>Add New Book</h2>
+      <form>
         <input
           value={values.title || ''}
           type="text"

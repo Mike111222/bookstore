@@ -1,31 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteBook, getBooks } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice';
 
 const BookCard = () => {
-  const { books, isLoading, isError } = useSelector((state) => state.books);
+  const books = useSelector((store) => store.books.books);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getBooks());
-  }, [dispatch]);
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error: try again</div>;
-  }
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
+  };
 
   const renderBooks = books.map((book) => (
-    <div key={book.item_id} className="bookContainer">
+    <div key={book.itemId} className="bookContainer">
       <div className="bookTitle">
         <p>{book.category}</p>
         <p>{book.title}</p>
         <p>{book.author}</p>
         <ul className="buttonsList">
           <li><button type="button">Comments</button></li>
-          <li><button type="button" onClick={() => dispatch(deleteBook(book.item_id))}>Remove</button></li>
+          <li><button type="button" onClick={() => handleRemoveBook(book.itemId)}>Remove</button></li>
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
