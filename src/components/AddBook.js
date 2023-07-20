@@ -31,7 +31,7 @@ const AddBook = () => {
 
   return (
     <section className="addBook">
-      <h2>ADD NEW BOOK</h2>
+      <h3>ADD NEW BOOK</h3>
       <form>
         <input
           value={values.title || ''}
@@ -62,7 +62,7 @@ const AddBook = () => {
           <option value="Science">Science</option>
         </select>
 
-        <button type="submit" onClick={handleSubmit}>Add Book</button>
+        <button className="addBtn" type="submit" onClick={handleSubmit}>ADD BOOK</button>
       </form>
     </section>
   );
