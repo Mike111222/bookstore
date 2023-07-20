@@ -1,38 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook, getBooks } from '../redux/books/booksSlice';
 
 const BookCard = () => {
-  const books = useSelector((store) => store.books.books);
+  const { books, isLoading, isError } = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
-  };
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error: try again</div>;
+  }
 
   const renderBooks = books.map((book) => (
-    <div key={book.itemId} className="bookContainer">
+    <div key={book.item_id} className="bookContainer">
       <div className="bookTitle">
-        <p>{book.category}</p>
-        <p>{book.title}</p>
-        <p>{book.author}</p>
+        <p className="category">{book.category}</p>
+        <p className="title">{book.title}</p>
+        <p className="author">{book.author}</p>
         <ul className="buttonsList">
-          <li><button type="button">Comments</button></li>
-          <li><button type="button" onClick={() => handleRemoveBook(book.itemId)}>Remove</button></li>
-          <li><button type="button">Edit</button></li>
+          <li><button className="bookBtn" type="button">Comments</button></li>
+          <li><button className="bookBtn" type="button" onClick={() => dispatch(deleteBook(book.item_id))}>Remove</button></li>
+          <li><button className="bookBtn" type="button">Edit</button></li>
         </ul>
       </div>
-      <div className="bookChart">
-        <div>Chart</div>
-        <div>
-          <p>progres</p>
-          <p>COMPLETED</p>
+      <div className="progress">
+        <div className="chart">
+          <div className="ProgressBar">
+            <div className="circle-wrap">
+              <div className="circle">
+                <div className="mask half">
+                  <div className="fill" />
+                </div>
+                <div className="inside-circle" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="percentages">
+          <h2>33%</h2>
+          <p className="status">Completed</p>
         </div>
       </div>
       <div className="bookChapter">
-        <p>currentChapter</p>
-        <p>chapterNumber</p>
-        <button type="button">Update Progress</button>
+        <p className="currentChapter">currentChapter</p>
+        <p>chapter3</p>
+        <button className="updateProgress" type="button">Update Progress</button>
       </div>
     </div>
   ));
