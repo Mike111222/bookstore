@@ -1,4 +1,4 @@
-/* Roboto font import */
+/* import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
 * {
@@ -22,11 +22,13 @@ body {
   padding: 1% 5%;
   background-color: #fff;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .navTitle {
   font-weight: bold;
   color: #0290ff;
+  width: 15rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
 }
@@ -37,6 +39,10 @@ body {
 }
 
 .navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   letter-spacing: 1.9px;
   width: 13.563rem;
   list-style: none;
@@ -55,6 +61,11 @@ body {
   color: black;
 }
 
+.navLinks li .active {
+  color: #1a1817;
+  font-weight: bold;
+}
+
 /* Book Container */
 .mainContainer {
   display: flex;
@@ -65,7 +76,6 @@ body {
 .bookContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #fff;
   margin: 1% 5%;
@@ -79,6 +89,7 @@ body {
 .bookTitle {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 
 .category {
@@ -100,7 +111,7 @@ body {
 .buttonsList {
   display: flex;
   gap: 1rem;
-  padding: 0;
+  margin-top: 1rem;
 }
 
 .buttonsList li {
@@ -123,8 +134,6 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 35%;
-  height: auto;
-  background: none;
 }
 
 .chart {
@@ -213,7 +222,7 @@ body {
 
 .bookChapter {
   border-left: solid 1px #cdcbd0;
-  padding: 2% 0 2% 3%;
+  padding: 2% 0 2% 8%;
 }
 
 .currentChapter {
@@ -242,64 +251,33 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.addBook h3 {
+  letter-spacing: -0.75px;
+  margin-bottom: 0.5rem;
+}
+
 form input {
   width: 23%;
   padding: 1% 2%;
   margin-right: 30px;
+  border: 0.5px solid lightgray;
 }
 
 form select {
   width: 22%;
   padding: 1% 2%;
   margin-right: 30px;
+  border: 0.5px solid lightgray;
+  margin-right: 5.2rem;
 }
 
 form button {
-  width: 15%;
+  width: 20%;
   padding: 1% 2%;
   background-color: #0290ff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   color: white;
-}
-
-@media only screen and (max-width: 768px) {
-  .navLinks li {
-    margin-top: 1rem;
-  }
-
-  .bookContainer {
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .progress {
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 100%;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  form input {
-    width: 100%;
-    padding: 2% 2%;
-  }
-
-  form select {
-    width: 100%;
-    padding: 2% 2%;
-    margin: 0;
-  }
-
-  form button {
-    width: 100%;
-    padding: 2% 2%;
-  }
+  font-family: 'Roboto Slab', serif;
 }
