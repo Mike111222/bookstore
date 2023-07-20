@@ -10,24 +10,25 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Bookstore\] ](#-bookstore-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment ](#deployment-)
+  - [👥 Author ](#-author-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -44,13 +45,14 @@ Redux
 HTML
 CSS
 API
+ThunkAPI
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, CSS, JavaScript, React, Redux, API</a></li>
+    <li><a href="#">HTML, CSS, JavaScript, React, Redux, API, ThunkAPI, Redux Toolkit, axios</a></li>
   </ul>
 </details>
 
@@ -68,9 +70,9 @@ API
   </ul>
 </details>
 <details>
-  <summary>API</summary>
+  <summary>bookStoreAPI</summary>
   <ul>
-    <li><a href="#">External API</a></li>
+    <li><a href="https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UUD89QFWkJvMJew3gPgt">bookStoreAPI</a></li>
   </ul>
 </details>
 
@@ -80,7 +82,8 @@ API
 
 - **[Allows to use add new book]**
 - **[Allows to remove the book]**
-- **[Allows to comment the book]**
+- **[Allows to See the active Nav Link the user is in, which is auto highlifgted using states.]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
