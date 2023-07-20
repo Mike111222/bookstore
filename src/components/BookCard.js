@@ -25,7 +25,9 @@ const BookCard = () => {
         <p className="author">{book.author}</p>
         <ul className="buttonsList">
           <li><button className="bookBtn" type="button">Comments</button></li>
+          <li>|</li>
           <li><button className="bookBtn" type="button" onClick={() => dispatch(deleteBook(book.item_id))}>Remove</button></li>
+          <li>|</li>
           <li><button className="bookBtn" type="button">Edit</button></li>
         </ul>
       </div>
@@ -48,9 +50,9 @@ const BookCard = () => {
         </div>
       </div>
       <div className="bookChapter">
-        <p className="currentChapter">currentChapter</p>
-        <p>chapter3</p>
-        <button className="updateProgress" type="button">Update Progress</button>
+        <p className="currentChapter">CURRENT CHAPTER</p>
+        <p>Chapter3</p>
+        <button className="updateProgress" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   ));
