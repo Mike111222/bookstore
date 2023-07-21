@@ -15,6 +15,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -36,15 +37,16 @@
 
 
 
-**[Bookstore]** is a project in which a collection of books is displayed. Users can add/remove books from this bookstore, track the progress of any particular book.
+**[Bookstore]** is a project in which a collection of books is displayed. Users can add/remove books from this bookstore.
 
 ## 🛠 Built With <a name="built-with"></a>
 JavaScript
 React
 Redux
+Redux Toolkit
+axios
 HTML
 CSS
-API
 ThunkAPI
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -52,7 +54,7 @@ ThunkAPI
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, CSS, JavaScript, React, Redux, API, ThunkAPI, Redux Toolkit, axios</a></li>
+    <li><a href="#">HTML, CSS, JavaScript, React, Redux, ThunkAPI, Redux Toolkit, axios</a></li>
   </ul>
 </details>
 
@@ -82,8 +84,14 @@ ThunkAPI
 
 - **[Allows to use add new book]**
 - **[Allows to remove the book]**
-- **[Allows to See the active Nav Link the user is in, which is auto highlifgted using states.]**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://bookstore-kx1i.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,7 +210,7 @@ If you like this project give me a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to Zeplin project for the design
+Thanks to Zeplin project for the design, Thanks to Microverse, Code Reviewers and my fellow students.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
