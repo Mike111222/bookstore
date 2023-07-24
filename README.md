@@ -117,7 +117,7 @@ In order to run this project you need:
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-https://github.com/fpsapc/bookstore
+https://github.com/Mike111222/bookstore
 ```
 
 - Navigate to the location of the folder in your machine:
