@@ -91,7 +91,7 @@ ThunkAPI
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://bookstore-kx1i.onrender.com/)
+- [Live Demo Link](https://the-bookstore-111222.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
